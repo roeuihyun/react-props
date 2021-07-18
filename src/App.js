@@ -1,9 +1,11 @@
-function App() {
-  return (
-    <div className="App">
+import React, {Component} from 'react';
+import BookList from "./components/BookList";
 
-    </div>
-  );
+class App extends  Component {
+  render(){
+    //
+    return <BookList/>;
+  }
 }
 
 export default App;
