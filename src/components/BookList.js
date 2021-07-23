@@ -5,11 +5,15 @@ class BookList extends Component{
     //
     render(){
         //
+        // const books = this.props.books;
+        // destructuring 구조분해 할당
+        const {books} = this.props;
+
         return(
             //
             <List>
                 <ListItem>
-                    Item 01
+                    {books[0].title}
                 </ListItem>
                 <ListItem>
                     Item 02
