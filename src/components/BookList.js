@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {List, ListItem} from "@material-ui/core";
+import {List, ListItem, Container} from "@material-ui/core";
 import BookListItem from "./BookListItem";
 
 class BookList extends Component{
@@ -10,8 +10,9 @@ class BookList extends Component{
         // destructuring 구조분해 할당 ecma6
         const {books} = this.props;
         const bookItems = books.map(book => {
+            // 고유의 키값이 필요하다.
             return(
-                <ListItem>
+                <ListItem key = {book.ISBN}>
                     <BookListItem book = {book} />
                 </ListItem>
             )
@@ -19,9 +20,11 @@ class BookList extends Component{
 
         return(
             //
-            <List>
-                {bookItems}
-            </List>
+            <Container maxWidth={'sm'}>
+                <List>
+                    {bookItems}
+                </List>
+            </Container>
         );
     }
 }
