@@ -1,9 +1,27 @@
 import React, {Component} from "react";
 
+import {Paper,Grid, Typography} from "@material-ui/core";
+
 class BookListItem extends Component{
     //
     render() {
         //
-        return;
+        const {book} = this.props;
+        return(
+            <Paper>
+                <Grid container spacing={ 2 }>
+                    <Grid item>
+                        <img src={book.imgUrl} />
+                    </Grid>
+                    <Grid item>
+                        <Typography component={'h5'} variant={'h5'}>
+                            {book.title}
+                        </Typography>
+                    </Grid>
+                </Grid>
+            </Paper>
+        )
     }
 }
+
+export default BookListItem;

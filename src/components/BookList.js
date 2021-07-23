@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import {List, ListItem} from "@material-ui/core";
+import BookListItem from "./BookListItem";
 
 class BookList extends Component{
     //
@@ -13,7 +14,7 @@ class BookList extends Component{
             //
             <List>
                 <ListItem>
-                    {books[0].title}
+                    <BookListItem book = {books[0]} />
                 </ListItem>
                 <ListItem>
                     Item 02
