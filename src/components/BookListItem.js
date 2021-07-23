@@ -17,6 +17,12 @@ class BookListItem extends Component{
                         <Typography component={'h5'} variant={'h5'}>
                             {book.title}
                         </Typography>
+                        <Typography gutterBottom>
+                            {book.author}
+                        </Typography>
+                        <Typography color={"textSecondary"}>
+                            {book.introduce}
+                        </Typography>
                     </Grid>
                 </Grid>
             </Paper>
